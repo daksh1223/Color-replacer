@@ -1,0 +1,17 @@
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom: 0;
+  flex-direction: row;
+}
+
+.color-selector {
+  border-radius: 8px;
+  text-align: center;
+  margin-right: 0.25rem;
+  padding: 0;
+  height: 2rem;
+}
