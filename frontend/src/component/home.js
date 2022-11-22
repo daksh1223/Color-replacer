@@ -4,8 +4,8 @@ import "../styles/home.css";
 
 export default function Home() {
   const [videoOn, setVideoOn] = useState(false);
-  const [target, setTarget] = useState("Violet");
-  const [source, setSource] = useState("Violet");
+  const [target, setTarget] = useState("Black");
+  const [source, setSource] = useState("Black");
   useEffect(() => {
     console.log(target, source);
   }, [target, source]);
@@ -15,57 +15,55 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center",
-        
+        alignItems: "center"
       }}
     >
       <div className="input-wrapper">
-        <div style={{
-          display: "flex",
-        }}>
-          <label style={{
-          width: "max-content",
-        }} for="source">Color to change</label>
-        <select
-          className="color-selector"
-          id="source"
-          value={source}
-          onChange={(e) => {
-            setSource(e.target.value);
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center"
           }}
         >
-          <option>Violet</option>
-          <option>Indigo</option>
-          <option>Blue </option>
-          <option>Green</option>
-          <option>Yellow</option>
-          <option>Orange</option>
-          <option>Red</option>
-          <option>Black</option>
-          <option>White</option>
-        </select>
-        <label for="target" style={{ marginLeft: "2%" }}>
-          Target Color
-        </label>
-        <select
-          className="color-selector"
-          id="target"
-          value={target}
-          onChange={(e) => {
-            setTarget(e.target.value);
-          }}
-        >
-          <option>Violet</option>
-          <option>Indigo</option>
-          <option>Blue </option>
-          <option>Green</option>
-          <option>Yellow</option>
-          <option>Orange</option>
-          <option>Red</option>
-          <option>Black</option>
-          <option>White</option>
+          <label for="source">Color to change</label>
+          <select
+            className="color-selector"
+            id="source"
+            value={source}
+            onChange={(e) => {
+              setSource(e.target.value);
+            }}
+          >
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue </option>
+            <option>Green</option>
+            <option>Yellow</option>
+            <option>Orange</option>
+            <option>Red</option>
+            <option>Purple</option>
+            <option>Gray</option>
           </select>
-          </div>
+          <label for="target">Target Color</label>
+          <select
+            className="color-selector"
+            id="target"
+            value={target}
+            onChange={(e) => {
+              setTarget(e.target.value);
+            }}
+          >
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue </option>
+            <option>Green</option>
+            <option>Yellow</option>
+            <option>Orange</option>
+            <option>Red</option>
+            <option>Purple</option>
+            <option>Gray</option>
+          </select>
+        </div>
         <button
           onClick={() => {
             setVideoOn(!videoOn);
@@ -79,7 +77,8 @@ export default function Home() {
             textAlign: "center",
             width: "5rem",
             height: "2rem",
-            fontSize: "larger"
+            fontSize: "larger",
+            float: "right"
           }}
         >
           {!videoOn ? "Show" : "Hide"}

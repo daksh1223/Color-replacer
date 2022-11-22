@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
+  float: left;
   align-items: center;
   padding: 1rem;
   padding-bottom: 0;
@@ -11,7 +12,19 @@
 .color-selector {
   border-radius: 8px;
   text-align: center;
-  margin-right: 0.25rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
   padding: 0;
   height: 2rem;
+}
+
+.input-container {
+  margin-left: 2%;
+  display: flex;;
+}
+.input-container > label{
+  width: max-content;
+}
+.input-container > select {
+  margin-left: 2%;
 }

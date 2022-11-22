@@ -15,12 +15,13 @@ const Cam = ({ target, source, videoOn }) => {
         width: "80vw"
       }}
     >
+      {!videoOn && <div> Click on "Show" button to start the program</div>}
       {videoOn && (
         <img
           style={{ width: "100%", height: "100%" }}
           src={`http://localhost:4000/video_feed?target=${toHex(target).substr(
             1
-          )}&source=${toHex(source).substr(1)}`}
+          )}&source=${source.toLowerCase()}`}
           alt="Video"
         />
       )}
